@@ -1,0 +1,7 @@
+[
+    { "name": "Image 2", "thumbnail": "https://js.cx/gallery/img2-thumb.jpg", "full": "https://js.cx/gallery/img2-lg.jpg" },
+    { "name": "Image 3", "thumbnail": "https://js.cx/gallery/img3-thumb.jpg", "full": "https://js.cx/gallery/img3-lg.jpg" },
+    { "name": "Image 4", "thumbnail": "https://js.cx/gallery/img4-thumb.jpg", "full": "https://js.cx/gallery/img4-lg.jpg" },
+    { "name": "Image 5", "thumbnail": "https://js.cx/gallery/img5-thumb.jpg", "full": "https://js.cx/gallery/img5-lg.jpg" },
+    { "name": "Image 6", "thumbnail": "https://js.cx/gallery/img6-thumb.jpg", "full": "https://js.cx/gallery/img6-lg.jpg" }
+]

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.navigation {
+  background-color: #ffffff;
+}
+.menu-item,
+.item {
+  color: #222222;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 16px 23px 16px 23px;
+  transition: color 0.3s ease;
+  list-style-type: none;
+}
+.menu {
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  list-style-type: none;*/
+}
+
+.menu-item a,
+.item a {
+    text-decoration: none;
+}
+
+.success {
+  background-color: green;
+}
+
+.error {
+  background-color: red;
+}
+
+div {
+  height: 100px;
+  width: 100px;
+}

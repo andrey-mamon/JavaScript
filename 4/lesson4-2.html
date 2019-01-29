@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork 4</title>
+    <style>
+        .row {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        select {
+            width: 300px;
+            padding: 10px 15px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <div class="row">
+            <label for="city">Город обращения:</label>
+            <select id="city">
+                <option value="0">Выберите из списка</option>
+            </select>
+        </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        (function($) {
+            $.ajax({
+                url: "http://127.0.0.1:8080/russia.json",
+                type: "GET",
+                dataType: "json",
+                error: function() {
+                    alert("При выполнении запроса произошла ошибка");
+                },
+                success: function(data) {
+                    for (var i = 0; i < data.length; i++) {
+                        $("#city").append('<option value="' + i + '">' + data[i].city + '</option>');
+                    }
+                }
+            });
+        })(jQuery); 
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+GET, POST, PATCH, DELETE
+
+1. Получить все отзывы
+GET /review
+Ответ: [{
+  "id": "number",
+  "approved": "boolean",
+  "name": "string",
+  "text": "string"
+}]
+2. Добавить отзыв
+POST /review
+Запрос: {
+  "name": "string",
+  "text": "string"
+}
+3. Одобрить отзыв
+PATCH /review/<id>
+Запрос: {
+  "id": "number",
+  "approved": "boolean",
+}
+4. Удалить отзыв
+DELETE /review/<id>

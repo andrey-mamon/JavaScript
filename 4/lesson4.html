@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tabs {
+            clear: both;
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .tabs ul:after {
+            content: "";
+            display: block;
+            clear: both;
+            height: 5px;
+            background: #46c765;
+        }
+
+        .tabs ul li {
+            margin: 0px;
+            padding: 0px;
+            cursor: pointer;
+            display: block;
+            float: left;
+            padding: 10px 15px;
+            background: #e9eaeb;
+            color: #707070;
+        }
+
+        .tabs ul li.active,
+        .tabs ul li.active:hover {
+            background: #46c765;
+            color: #fff;
+        }
+
+        .tabs ul li:hover {
+            background: #d6d6d7;
+        }
+
+        .tabs-body {
+            display: block;
+            box-sizing: border-box;
+            padding: 20px 15px;
+            width: 600px;
+            background: #e9eaeb;
+        }
+
+        .vertical {
+            display: flex;
+        }
+
+        .vertical ul {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vertical ul:after {
+            display: none;
+        }
+
+        .vertical ul li {
+            cursor: pointer;
+            display: block;
+            padding: 10px 15px;
+            background: #e9eaeb;
+            color: #707070;
+        }
+
+        .vertical .tabs-body {
+            border-left: 5px solid #46c765;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="tabs1" class="tabs">
+        <ul>
+            <li class="active">Первая вкладка</li>
+            <li>Вторая вкладка</li>
+            <li>Третья вкладка</li>
+        </ul>
+        <div class="tabs-body">
+            <div>Первое содержимое <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo aut dicta eius, alias, quaerat architecto dolor quis quae explicabo amet.
+            </div>
+            <div>Второе содержимое <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam harum, aperiam incidunt sint, dicta sunt pariatur eos repudiandae mollitia, dolor ea commodi fuga fugit error iusto consectetur reiciendis excepturi nihil!
+            </div>
+            <div>Третье содержимое <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nesciunt blanditiis dolore quasi, rem doloremque doloribus accusantium earum maxime facilis delectus ipsa quas sunt tenetur eligendi ipsum nobis ad provident soluta rerum, perferendis atque autem quisquam. Similique incidunt ipsam ut eum atque molestias sit voluptatibus error necessitatibus natus voluptates ipsa minima sed nobis nihil, excepturi laborum, quibusdam. In laborum maxime tempore itaque eaque error qui esse, fugit tenetur a sunt provident illum sint beatae officia aspernatur eos. Quisquam tempora neque velit error nulla, id necessitatibus consequatur sed aliquam? Dolores molestias molestiae ducimus consequuntur. Voluptate earum, optio, numquam aliquid maxime non?
+            </div>
+        </div>
+    </div>
+
+    <div id="tabs2" class="tabs vertical">
+        <ul>
+            <li class="active">Первая вкладка</li>
+            <li>Вторая вкладка</li>
+            <li>Третья вкладка</li>
+        </ul>
+        <div class="tabs-body">
+            <div>Первое содержимое <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo aut dicta eius, alias, quaerat architecto dolor quis quae explicabo amet.
+            </div>
+            <div>Второе содержимое <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam harum, aperiam incidunt sint, dicta sunt pariatur eos repudiandae mollitia, dolor ea commodi fuga fugit error iusto consectetur reiciendis excepturi nihil!
+            </div>
+            <div>Третье содержимое <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nesciunt blanditiis dolore quasi, rem doloremque doloribus accusantium earum maxime facilis delectus ipsa quas sunt tenetur eligendi ipsum nobis ad provident soluta rerum, perferendis atque autem quisquam. Similique incidunt ipsam ut eum atque molestias sit voluptatibus error necessitatibus natus voluptates ipsa minima sed nobis nihil, excepturi laborum, quibusdam. In laborum maxime tempore itaque eaque error qui esse, fugit tenetur a sunt provident illum sint beatae officia aspernatur eos. Quisquam tempora neque velit error nulla, id necessitatibus consequatur sed aliquam? Dolores molestias molestiae ducimus consequuntur. Voluptate earum, optio, numquam aliquid maxime non?
+            </div>
+        </div>
+    </div>
+
+<!--    <script src="jquery-3.3.1.js"></script>-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script>
+        (function($) {
+            $(".tabs-body").each(function() {
+                $(this).find("div").eq(0).siblings().hide()
+            });
+            $(".tabs ul li").on("click", function(event) {
+                $(this).addClass("active")
+                    .siblings().removeClass("active");
+                $(this).parent().next().children().eq($(this).index()).show()
+                    .siblings().hide();
+            });
+        })(jQuery);
+
+    </script>
+
+
+</body>
+
+</html>

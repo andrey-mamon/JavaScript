@@ -1,0 +1,22 @@
+{
+  "review": [
+    {
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nesciunt blanditiis dolore quasi, rem doloremque doloribus accusantium earum maxime facilis delectus ipsa quas sunt tenetur eligendi ipsum nobis ad provident soluta rerum, perferendis atque autem quisquam.",
+      "name": "Petya",
+      "approved": "true",
+      "id": 1
+    },
+    {
+      "text": "Good!",
+      "name": "Kolya",
+      "approved": "true",
+      "id": 2
+    },
+    {
+      "text": "1\r\n2\r\n3\r\n4",
+      "name": "Ivan",
+      "approved": "true",
+      "id": 4
+    }
+  ]
+}
